@@ -1,0 +1,23 @@
+<html> 
+<head> </head>
+<body>
+<h2><font color="#0000FF">Today's Top Picks</font></h2>
+<table border=0><csp:query name="query" classname="Cinema.Film" queryname="TopFilms">
+<csp:while condition='FilmList.Next()'>
+ <tr>
+    <td>
+    	<b>#(FilmList.Get("Title"))#</b><br>
+    	#(FilmList.Get("Description"))#<br>
+    	<b>Genre</b>
+    	#(FilmList.Get("CategoryName"))#
+    	<b>Length</b>
+    	#(FilmList.Get("Length"))#
+    	<b>Rating</b>
+    	#(FilmList.Get("Rating"))#<br><br>
+    </td>
+    <td></td>
+ </tr>
+ </csp:while>
+</table>
+</body>
+</html>
